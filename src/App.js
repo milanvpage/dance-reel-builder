@@ -28,10 +28,18 @@ export default class App extends React.Component {
     })
   }
 
+  componentDidMount(){
+    // where I'll mount my data that I FETCHed from my backend
+  }
+
 // componentDidUpdate(){ // log my state after it updates to see how it changes
   //   console.log(this.state)
   // }
 
+  fetchData(){
+    //where I'll FETCH my data from backend
+  }
+  
   render(){
     return (
       <Router>

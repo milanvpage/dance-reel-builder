@@ -19,10 +19,10 @@ export default function Categories({category, commercial, concert, theater}) {
             render= {routerProps => <CommercialContainer commercial={commercial} routerInfo={routerProps}/>}/>
             <Route 
             exact path="/concert" 
-            render= {routerProps => <CommercialContainer commercial={concert} routerInfo={routerProps}/>}/>
+            render= {routerProps => <ConcertContainer commercial={concert} routerInfo={routerProps}/>}/>
             <Route 
             exact path="/theater" 
-            render= {routerProps => <CommercialContainer commercial={theater} routerInfo={routerProps}/>}/>
+            render= {routerProps => <TheaterContainer commercial={theater} routerInfo={routerProps}/>}/>
         </div>
     )
 }

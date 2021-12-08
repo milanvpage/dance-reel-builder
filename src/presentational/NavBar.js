@@ -19,14 +19,14 @@ export default function NavBar({changeCategory}) { //passing through my changeCa
 
             <NavLink to="/commercial"
             className={isSelected}
-            >StarShips</NavLink>
+            >Commercial </NavLink>
             <NavLink to="/concert"
             className={isSelected}
-            >Planets</NavLink>
+            >Concert </NavLink>
             <NavLink to="/theater"
             className={isSelected}
-            >People</NavLink>
-            
+            >Theater </NavLink>
+
             {/* set up state first in App.js becasue App.js will have access to my Navbar and my Categories  - IF WE SET STATE in my Navbar we wouldn't be able to get it to my Categories.js to determine which one it's rendering - AND if i set my state in Categories.js, how would NavBar change it*/}
             {/* all buttons need an onclick callback function */}
             {/* buttons should go here */}
