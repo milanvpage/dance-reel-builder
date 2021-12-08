@@ -6,6 +6,7 @@ Route
 } from 'react-router-dom';
 import React from 'react';
 import NavBar from './presentational/NavBar';
+import Categories from './Categories';
 
 export default class App extends React.Component {
   // set state that determines what category we're on
@@ -30,6 +31,7 @@ export default class App extends React.Component {
         <div className="App">
           <NavBar changeCategory={this.changeCategory}/>
           <h1>Dance Reel Builder</h1>
+          <Categories />
         </div>
       </Router>
     )
