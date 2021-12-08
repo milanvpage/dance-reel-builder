@@ -25,13 +25,19 @@ export default class App extends React.Component {
     })
   }
 
+// componentDidUpdate(){ // log my state after it updates to see how it changes
+  //   console.log(this.state)
+  // }
+
   render(){
     return (
       <Router>
         <div className="App">
           <NavBar changeCategory={this.changeCategory}/>
           <h1>Dance Reel Builder</h1>
-          <Categories />
+          <Categories category={this.state.category}/>
+          {/* need to make sure our Categroies knows about our state so it can determine which page to render - so we pass it through as a PROP (named category) */}
+          {/* Inisde my Catrgories Component is where I'm goign to look at this PROP that I passed through of "category" and determine which Component to render*/}
         </div>
       </Router>
     )
