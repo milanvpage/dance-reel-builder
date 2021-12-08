@@ -16,11 +16,19 @@ export default class App extends React.Component {
 
   // need setState() if we're using state, otherwise there's no point in having state
   // create function to change state
+  changeCategory = (category) => {
+    this.setState({
+      category: category
+
+      // we would be calling this function in the Navbar componenet in the onClicks - so we need to pass it through as a PROP to NavBar then insid emy onClick callback function
+    })
+  }
+
   render(){
     return (
       <Router>
         <div className="App">
-          <NavBar />
+          <NavBar changeCategory={this.changeCategory}/>
           <h1>Dance Reel Builder</h1>
         </div>
       </Router>
