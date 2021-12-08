@@ -5,14 +5,18 @@ Link,
 Route
 } from 'react-router-dom';
 import React from 'react';
+import NavBar from './presentational/NavBar';
 
 export default class App extends React.Component {
   
   render(){
     return (
-      <div className="App">
-        <h1>Dance Reel Builder</h1>
-      </div>
+      <Router>
+        <div className="App">
+          <NavBar />
+          <h1>Dance Reel Builder</h1>
+        </div>
+      </Router>
     )
   }
 }
