@@ -10,7 +10,9 @@ export default class App extends React.Component {
   
   render(){
     return (
-
+      <div className="App">
+        <h1>Dance Reel Builder</h1>
+      </div>
     )
   }
 }
