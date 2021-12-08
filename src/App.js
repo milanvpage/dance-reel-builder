@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import {BrowserRouter as Router,
-Link,
-Route
-} from 'react-router-dom';
 import React from 'react';
 import NavBar from './presentational/NavBar';
 import Categories from './Categories';
+import { BrowserRouter as Router,
+Link,
+Route
+} from 'react-router-dom';
 
 export default class App extends React.Component {
   // set state that determines what category we're on
@@ -38,7 +38,12 @@ export default class App extends React.Component {
         <div className="App">
           <NavBar changeCategory={this.changeCategory}/>
           <h1>Dance Reel Builder</h1>
-          <Categories category={this.state.category}/>
+          <Categories 
+          category={this.state.category}
+          commercial={this.state.commercial}
+          concert={this.state.concert}
+          theater={this.state.theater}
+          />
           {/* need to make sure our Categroies knows about our state so it can determine which page to render - so we pass it through as a PROP (named category) */}
           {/* Inisde my Catrgories Component is where I'm goign to look at this PROP that I passed through of "category" and determine which Component to render*/}
         </div>
