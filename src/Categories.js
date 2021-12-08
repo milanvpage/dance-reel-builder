@@ -8,15 +8,7 @@ export default function Categories({category}) {
     
     return (
         <div>
-            <NavLink to="/commercial"
-            className={isSelected}
-            >StarShips</NavLink>
-            <NavLink to="/concert"
-            className={isSelected}
-            >Planets</NavLink>
-            <NavLink to="/theater"
-            className={isSelected}
-            >People</NavLink>
+            
         </div>
     )
 }
