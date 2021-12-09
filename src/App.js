@@ -39,13 +39,12 @@ export default class App extends React.Component {
   fetchData(){
     //where I'll FETCH my data from backend
   }
-  
+
   render(){
     return (
       <Router>
         <div className="App">
           <NavBar changeCategory={this.changeCategory}/>
-          <h1>Dance Reel Builder</h1>
           <Categories 
           category={this.state.category}
           commercial={this.state.commercial}

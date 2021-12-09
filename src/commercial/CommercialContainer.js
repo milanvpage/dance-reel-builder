@@ -1,6 +1,7 @@
 import React from 'react'
 
-export default function CommercialContainer() {
+export default function CommercialContainer(props) {
+    
     function handleClick(){
         console.log("click")
         props.routerInfo.history.goBack()
@@ -8,7 +9,7 @@ export default function CommercialContainer() {
     
     return (
         <div>
-            <button onClick={handleCLick}>Back</button>
+            <button onClick={handleClick}>Back</button>
 
             <h1>Commercial Choreography</h1>
             {/* map through data here once we have our backend and FETCH request set up */}

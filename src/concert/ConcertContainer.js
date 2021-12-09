@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function ConcertContainer() {
+export default function ConcertContainer(props) {
     
     function handleClick(){
         console.log("click")
@@ -9,7 +9,7 @@ export default function ConcertContainer() {
     
     return (
         <div>
-            <button onClick={handleCLick}>Back</button>
+            <button onClick={handleClick}>Back</button>
             <h1>Concert Choreography</h1>
             {/* map through data here once we have our backend and FETCH request set up */}
 
