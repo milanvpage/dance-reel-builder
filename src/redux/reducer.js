@@ -1,4 +1,9 @@
-function reducer(state = {commercial: [], concert: [], theater: [], loading: false}, action){
+function reducer(state = {
+    commercial: [], 
+    concert: [], 
+    theater: [], 
+    loading: false}, 
+    action){
     switch (action.type) {
         case "SET_COMMERCIAL":
             
