@@ -1,8 +1,11 @@
 function reducer(state = {commercial: [], concert: [], theater: [], loading: false}, action){
     switch (action.type) {
-        // case value:
+        case "SET_COMMERCIAL":
             
-        //     break;
+            return {
+                ...state,
+                commercial: action.payload
+            };
     
         default:
             return state;
