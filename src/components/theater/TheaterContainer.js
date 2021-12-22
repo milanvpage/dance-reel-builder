@@ -2,9 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { setTheater } from '../../redux/TheaterAction'
 
-class Theater extends Component {
+class TheaterContainer extends Component {
     
-    
+    componentDidMount(){
+        this.props.dispatchSetTheater(theater)
+    }
     
     render() {
         return (
@@ -23,4 +25,11 @@ function mapStateToProps(stateFromStore){
         theater: stateFromStore.theater
     }
 }
+
+function mapDispatchToProps(dispatch) {
+    return{
+        dispatchSetTheater: () => dispatch(setTheater())
+    }
+}
+
 export default connect(mapStateToProps, mapDispatchToProps)(TheaterContainer)

@@ -11,6 +11,7 @@ export default class App extends Component {
       <div className="App">
         <NavLink to ="/">Home</NavLink><br/>
         <NavLink to="/commercial">Commercial</NavLink>
+        <NavLink to="/theater">Theater</NavLink>
         <Pages />
       </div>
     )
