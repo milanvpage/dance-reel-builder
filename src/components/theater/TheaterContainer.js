@@ -2,7 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { setTheater } from '../../redux/TheaterAction'
 
-export default class Theater extends Component {
+class Theater extends Component {
+    
+    
+    
     render() {
         return (
             <div>
@@ -11,3 +14,10 @@ export default class Theater extends Component {
         )
     }
 }
+
+function mapStateToProps(stateFromStore){
+    return {
+        theater: stateFromStore.theater
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(TheaterContainer)
