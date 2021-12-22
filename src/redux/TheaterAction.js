@@ -1,7 +1,7 @@
-// BEST PRATICE with the SET_COMMERCIAL variable
-//  export const setCommercial = (commercial) => ({type: SET_COMMERCIAL, payload: commercial})
+// BEST PRATICE with the SET_theater variable
+//  export const settheater = (theater) => ({type: SET_theater, payload: theater})
 
-export const setCommercial = () => {
+export const setTheater = () => {
     
     return (dispatch) => {
         //fetch goes here
@@ -9,12 +9,12 @@ export const setCommercial = () => {
         .then(r => r.json())
         .then(theater => dispatch({type: "SET_THEATER", payload: theater}))
     }
-    // {type: "SET_COMMERCIAL", payload: commercial}
+    // {type: "SET_THEATER", payload: theater}
 }
 
 
-// (commercial) is our array directly coming from our backend
+// (theater) is our array directly coming from our backend
 
-// add commercial
-// edit commercial
- // delete commercial
+// add theater
+// edit theater
+ // delete theater
