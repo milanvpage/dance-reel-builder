@@ -5,7 +5,7 @@ import { setTheater } from '../../redux/TheaterAction'
 class TheaterContainer extends Component {
     
     componentDidMount(){
-        this.props.dispatchSetTheater(theater)
+        this.props.dispatchSetTheater()
     }
     
     render() {

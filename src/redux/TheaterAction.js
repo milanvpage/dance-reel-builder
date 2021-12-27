@@ -1,5 +1,5 @@
 // BEST PRATICE with the SET_theater variable
-//  export const settheater = (theater) => ({type: SET_theater, payload: theater})
+//  export const setTheater = (theater) => ({type: SET_theater, payload: theater})
 
 export const setTheater = () => {
     
