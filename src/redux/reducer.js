@@ -17,6 +17,12 @@ function reducer(state = {
                 ...state,
                 theater: action.payload
             };
+        case "SET_CONCERT":
+            
+            return {
+                ...state,
+                concert: action.payload
+            };
     
         default:
             return state;
