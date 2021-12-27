@@ -12,6 +12,7 @@ export default class App extends Component {
         <NavLink to ="/">Home</NavLink><br/>
         <NavLink to="/commercial">Commercial</NavLink>
         <NavLink to="/theater">Theater</NavLink>
+        <NavLink to="/concert">Concert</NavLink>
         <br/>
         <Pages />
       </div>
