@@ -9,8 +9,7 @@ class ConcertContainer extends Component {
             <div>
                 <h1>All Concert Dance</h1>
                 <div>
-                    <h1>Test</h1>
-                    {/* map out concert dance here */}
+                    {this.props.concert.map(concert => <p key={concert.id}>{concert.name}</p>)}
                 </div>
             </div>
         )
@@ -19,7 +18,7 @@ class ConcertContainer extends Component {
 
 function mapStateToProps(stateFromStore){
     return{
-        theater: stateFromStore.theater
+        concert: stateFromStore.concert
     }
 }
 
