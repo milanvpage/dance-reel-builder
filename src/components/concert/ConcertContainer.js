@@ -18,7 +18,9 @@ class ConcertContainer extends Component {
             <div>
                 <h1>All Concert Dance</h1>
                 <div>
-                    {this.props.concert.map(concert => <p key={concert.id}>{concert.name}</p>)}
+                    <ul>
+                    {this.props.concert.map(concert => <li key={concert.id}>{concert.name}</li>)}
+                    </ul>
                 </div>
             </div>
         )

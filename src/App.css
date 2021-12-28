@@ -1,3 +1,26 @@
 .selected {
   color: grey;
 }
+
+body {
+  background-color: lavenderblush;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: rgb(175, 147, 110);
+}
+
+li {
+  color: rgb(5, 96, 148);
+}
+
+h4 {
+  color: rgb(138, 49, 197);
+}
+
+h3 {
+  color: rgb(138, 49, 197);
+}
+
+

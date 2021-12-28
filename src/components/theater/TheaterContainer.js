@@ -13,7 +13,9 @@ class TheaterContainer extends Component {
             <div>
                 <h1>All Theater Dance</h1>
                 <div>
-                    {this.props.theater.map(theater => <p key={theater.id}>{theater.name}</p>)}
+                    <ul>
+                    {this.props.theater.map(theater => <li key={theater.id}>{theater.name}</li>)}
+                    </ul>
                 </div>
             </div>
         )

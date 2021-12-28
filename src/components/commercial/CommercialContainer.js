@@ -14,7 +14,9 @@ render(){
         <div>
             <h1>All Commercial Dance</h1>
             <div>
-                {this.props.commercial.map(commercial => <p key={commercial.id}>{commercial.name}</p>)}
+                <ul>
+                {this.props.commercial.map(commercial => <li key={commercial.id}>{commercial.name}</li>)}
+                </ul>
             </div>
         </div>
         )
