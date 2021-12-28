@@ -5,7 +5,7 @@ export const setConcert = () => {
     
     return (dispatch) => {
         //fetch goes here
-        fetch("http://localhost:3000/concert")
+        fetch("http://localhost:3000/concerts")
         .then(r => r.json())
         .then(concerts => dispatch({type: "SET_CONCERT", payload: concerts}))
     }
