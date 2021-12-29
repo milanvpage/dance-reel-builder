@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { setCommercial } from './../../redux/CommercialAction'
+import CommercialForm from './CommercialForm'
 
 class CommercialContainer extends React.Component {
     
@@ -14,6 +15,7 @@ render(){
         <div>
             <h1>All Commercial Dance</h1>
             <div>
+                <CommercialForm />
                 <ul>
                 {this.props.commercial.map(commercial => <li key={commercial.id}>{commercial.name}</li>)}
                 </ul>
