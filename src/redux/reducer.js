@@ -25,10 +25,16 @@ function reducer(state = {
             };
         case "ADD_COMMERCIAL":
 
-        return {
-            ...state,
-            commercial: [...state.commercial, action.payload] // as long as my payload is directly my commercial object then we're good, it's kind of up to us how we are formatting it - as long as we call our key payload - but let'ssay that my datat was formatted differntly, like action.payload.commercial, it hasa key of commercial then we'd have to write it this way to access our data
-        }
+            return {
+              ...state,
+              commercial: [...state.commercial, action.payload] // as long as my payload is directly my commercial object then we're good, it's kind of up to us how we are formatting it - as long as we call our key payload - but let'ssay that my datat was formatted differntly, like action.payload.commercial, it hasa key of commercial then we'd have to write it this way to access our data
+            };
+        case "DELETE_COMMERCIAL":
+            const commercial // find my commercial with it's uniqe id - with our delete requests that's what we'll be sneding to our backend delete/commercial/:id
+            // SO let's think about sending through an id from my action
+            return {
+
+            }
     
         default:
             return state;

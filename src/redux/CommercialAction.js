@@ -27,7 +27,7 @@ export const addCommercial = (commercial) => { // take in arg so we have datat f
         fetch("http://localhost:3000/commercials", {
             method: "POST",
             headers: {
-                "Content-Typer": "application/json",
+                "Content-Type": "application/json",
                 "Accept": "application/json" // these tell my backend what kind of response I want back and what kind of response I'm sending - how I'm sending my data (what kind of language), and what kind of data I'm getting back (what kind of languagae I'm getting back)
             },
             body: JSON.stringify(commercial)

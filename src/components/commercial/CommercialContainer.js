@@ -18,6 +18,7 @@ render(){
                 <CommercialForm />
                 <ul>
                 {this.props.commercial.map(commercial => <li key={commercial.id}>{commercial.name}</li>)}
+                {/* key={commercial.id} */}
                 </ul>
             </div>
         </div>
