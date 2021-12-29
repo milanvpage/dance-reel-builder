@@ -1,8 +1,10 @@
 // need controlled components with my input fields
 
 import React, { Component } from 'react'
+import { addCommercial } from '../../redux/CommercialAction'
+import { connect } from 'react-redux'
 
-export default class CommercialForm extends Component {
+class CommercialForm extends Component {
     // set up state so page doens't reload, and so my form is controlled - local state
     // set up input field to be controlled with my state
     state = {
@@ -15,7 +17,7 @@ export default class CommercialForm extends Component {
         )
     } // calling an arrow function so we have the context of this from where we've defined it rather than where we're calling it(the scope from this function to pass "this" from this scope)
 
-    handleSubmit = () => {
+    handleSubmit = (e) => {
         e.preventDefault() // bcause I want to handle my http request with fetch, I don't want them handled bby html SO I'm preventing html from trying to send a GET request
         // this is where we want to tie in our action, so we want to:
         // dispatch addCommercial
@@ -39,3 +41,15 @@ export default class CommercialForm extends Component {
         )
     }
 }
+function mapDispatchToProps() {
+
+}
+
+export default connect(null, mapDispatchToProps)(CommercialForm)
+// need connect so we can have access to the dispatch function
+// we use null here because we're not using mapStateToProps which is the first arg connect takes in, so we needed to get access to the second arg mpaDispatchToProps so we can have access to my dispatch function
+// that's what we're pulling in here is access to dispatch and "null" (mapStateToProps) gives us acces to state
+//  REMEMBER first arg of connect gives me access to state, second argument of connect gives me access to dispatch - AND BOTH of them will return an object thatwill be merged with my PROPS
+// 
+// need mapDispatchProps
+// call connect which will return us a function which will take in my Component
