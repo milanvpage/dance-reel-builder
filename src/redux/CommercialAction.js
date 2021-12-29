@@ -17,6 +17,11 @@ export const setCommercial = () => {
 
 
 // (commercial) is our array directly coming from our backend
-
+// alsways knwo that my action creators are going to be functions
+// 
+// add commercial
+export const addCommercial = () => {
+    // need thunk becasue we're doing async logic
+}
 // edit commercial
  // delete commercial
