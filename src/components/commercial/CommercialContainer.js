@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { setCommercial } from './../../redux/CommercialAction'
+import CommercialCard from './CommercialCard'
 import CommercialForm from './CommercialForm'
 
 class CommercialContainer extends React.Component {
@@ -17,8 +18,9 @@ render(){
             <div>
                 <CommercialForm />
                 <ul>
-                {this.props.commercial.map(commercial => <li key={commercial.id}>{commercial.name}</li>)}
-                {/* key={commercial.id} */}
+                {this.props.commercial.map(commercial => <CommercialCard key={commercial.id} {...commercial}/>)}
+                {/* pass through my key as a prop for my id - and spreading out all my props for my commercial and sneding it through to my CommercialCard */}
+        {/* instead of doing person={person} - THIS way i don'thave to callit inside my CommercialCard props.person.name etc.. now I can just call and get those attributes directly */}
                 </ul>
             </div>
         </div>
