@@ -41,8 +41,13 @@ class CommercialForm extends Component {
         )
     }
 }
-function mapDispatchToProps() {
-
+function mapDispatchToProps(dispatch) {
+// always want to retrun an object that will be merged with our PROPS - SO we can access them in our Component
+    return {
+        dispatchAddCommercial: (commercial) => dispatch(addCommercial(commercial)) // this is where we're passing in our addCommercial function to diaptch - this function addCommercial is goign ot return my function - THIS function when we call it is goignto return a function ( the function we are using our fetch request in) AND then thunk is goign to call this function and pass in dispatch (we pass dispatch into ourfunction when we created our fetch request - look at our commercialAction.js)
+        // and in this fetch request we're kinda delaying our dispatch until we get our response back from our backend 
+        // need an arg of commercial becasue that's the object that we're passing into our function to be sent to the backend
+    }
 }
 
 export default connect(null, mapDispatchToProps)(CommercialForm)
