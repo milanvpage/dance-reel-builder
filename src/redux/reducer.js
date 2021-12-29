@@ -30,10 +30,20 @@ function reducer(state = {
               commercial: [...state.commercial, action.payload] // as long as my payload is directly my commercial object then we're good, it's kind of up to us how we are formatting it - as long as we call our key payload - but let'ssay that my datat was formatted differntly, like action.payload.commercial, it hasa key of commercial then we'd have to write it this way to access our data
             };
         case "DELETE_COMMERCIAL":
-            const commercial // find my commercial with it's uniqe id - with our delete requests that's what we'll be sneding to our backend delete/commercial/:id
+            // {type: "DELETE_COMMERCIAL", payload: 10}
+            // HOW CNA I use my payload of an id number to remove that commercial from my array and state
+            // can filter throigh an array and return all that doesn't match that specific ID 
+            const newCommercials = state.commercial.filter(c => c.id !== action.payload) // filter through all our comme5rcials and return the id that does not equal !== my action.payload ( the ID)
+            // find my commercial with it's uniqe id - with our delete requests that's what we'll be sneding to our backend delete/commercial/:id
             // SO let's think about sending through an id from my action
+            // ACTION PAYLOAD will actually be  like 
+            // {type: "DELETE_COMMERCIAL", payload: 10}
+            // BECAUSE to delete a person all I really need to know is their id, I don't need to know anything else
+            // 
             return {
-
+                //spread state
+                ...state,
+                commercial: newCommercials // we could have defined the filter logic here, it's just good to keep extra logic separate from our return and leave our return really clean
             }
     
         default:
