@@ -18,6 +18,5 @@ export const setCommercial = () => {
 
 // (commercial) is our array directly coming from our backend
 
-// add commercial
 // edit commercial
  // delete commercial
