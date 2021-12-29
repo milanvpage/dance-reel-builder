@@ -22,6 +22,9 @@ class CommercialForm extends Component {
         // this is where we want to tie in our action, so we want to:
         // dispatch addCommercial
         // and clear out my state
+        this.props.dispatchAddCommercial(this.state) // calling the function I'm passing through as a prop in my mapDispatchToProps function - so my handleSUbmit can call that function everytime you hit sumbit button
+        // pass in my state because it represents my whole commercial 
+        // If we have somehting else in state that has nothing to do with my commercial then we'd have to do more thinking - but for right now all we have is a name
         this.setState({name: ""}) // this will clear our name in the inout field so when I hit submit the input clears
     }
     // always need to prevent default with handleSubit
