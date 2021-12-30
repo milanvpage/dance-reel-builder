@@ -56,7 +56,29 @@ function reducer(state = {
             // THEN we're going to be changing our commercial: key which is an array []
             // what are we goignto need to do inside of this array to change one commercial and still retrun all of my commercials 
             // In other words: we don't wnat to remove a commercial from an array edit it and then retun it to the bottom of the page, we want to keep it ezcalty where it is without messign up the order of my array/ how my data is orginally ordered
-        default:
+            // FIND THE INDEX OF THE commercial!! - where it's placement is in the array
+            // WHAT can we use in JS with my arrays to set this up so we have this first chunk then we have that item at that index and then we have a next chunk
+            // WE CAN USE Slice!!! - research this milan
+
+            // {type: "EDIT_COMMERCIAL", payload: commercialObj}
+
+            const personIndex = state.commercial.findIndex( c => c.id === action.payload.id)
+            // here I'm looking at my action.payload which is my coommercialObject that's going to be coming from my action, or coming from my backend too 
+            // AND THEN looking at the id of that commercial and comparing it otthe id of the commercial in my state, as I'm iterating over this  
+            return {
+                // THEN HERE what I'm doing is taking that commercial array slicng the first bit out of it up to that comercialIndex ( the commercial we're looking for)
+                // THEN puting in that updated commercial from my action.payload 
+                // THEN getting the rest of that slice of my commercials
+                ...state,
+                commercial: [
+                    ...statecommercial.slice(0, commercialIndex),
+                    action.payload, // my updatedCommercial is just coming from my action payload
+                    // then the rest of my item will be the rest of that slice
+                    ...commercial.slice(commercialIndex + 1)
+                    // then if we don't pass in that second arg it'll just take the rest of my array
+                ]
+            }
+            default:
             return state;
     }
 }
@@ -81,4 +103,7 @@ export default reducer
 // so we just want torese our commercial dance (or theater or concert) - reset it to what my backend gives me
 // action.payload - grabing our data from backend it here
 // implement this into my commercail or theater container so I can have all this show up on the page
-// 
+
+
+
+// another way if do
