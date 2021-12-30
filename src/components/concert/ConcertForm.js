@@ -1,6 +1,11 @@
 import React, { Component } from 'react'
 
 export default class ConcertForm extends Component {
+    
+    state = {
+        name: ""
+    }
+    
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
