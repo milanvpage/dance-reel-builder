@@ -5,6 +5,7 @@ function reducer(state = {
     loading: false}, 
     action){
     switch (action.type) {
+        // SET
         case "SET_COMMERCIAL":
             
             return {
@@ -23,6 +24,8 @@ function reducer(state = {
                 ...state,
                 concert: action.payload
             };
+
+        // ADD
         case "ADD_COMMERCIAL":
 
             return {
@@ -41,6 +44,8 @@ function reducer(state = {
               ...state,
               concert: [...state.concert, action.payload] // as long as my payload is directly my commercial object then we're good, it's kind of up to us how we are formatting it - as long as we call our key payload - but let'ssay that my datat was formatted differntly, like action.payload.commercial, it hasa key of commercial then we'd have to write it this way to access our data
             };
+
+        // DELETE
         case "DELETE_COMMERCIAL":
             // {type: "DELETE_COMMERCIAL", payload: 10}
             // HOW CNA I use my payload of an id number to remove that commercial from my array and state
@@ -57,6 +62,22 @@ function reducer(state = {
                 ...state,
                 commercial: newCommercials // we could have defined the filter logic here, it's just good to keep extra logic separate from our return and leave our return really clean
             }
+        case "DELETE_THEATER":
+            const newTheaters = state.theater.filter(t => t.id !== action.payload)
+            
+            return {
+                ...state,
+                theater: newTheaters
+            }
+        case "DELETE_CONCERT":
+            const newConcerts = state.concert.filter(c => c.id !== action.payload)
+
+            return {
+                ...state,
+                concert: newConcerts
+            }
+
+        // EDIT
         case "EDIT_COMMERCIAL":
             // {type: "DELETE_COMMERCIAL", payload: 10}
             // for this one, what I'm expecting is something similar in terms of our delte action object BUT no winstead of an id number we're goign to need that whole commercial object 
