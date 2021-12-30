@@ -3,9 +3,13 @@ import React, { Component } from 'react'
 export default class TheaterForm extends Component {
     render() {
         return (
-            <div>
+            <form onSubmit={this.handleSubmit}>
+                <label htmlFor="theater-name-input">Name:</label>
                 
-            </div>
+                <input id="theater-name-input" onChange={this.handleChange} value={this.state.name} type="text" /> 
+                
+                <input type="submit" />
+            </form>
         )
     }
 }
