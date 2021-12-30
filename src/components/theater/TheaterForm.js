@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { addTheater } from '../../redux/TheaterAction'
+import { connect } from 'react-redux'
 
-export default class TheaterForm extends Component {
+class TheaterForm extends Component {
     
     state = {
         name: ""
@@ -34,3 +36,11 @@ export default class TheaterForm extends Component {
         )
     }
 }
+
+function mapDispatchToProps(dispatch){
+    return {
+        dispatchAddTheater: theater => dispatch(addTheater(theater))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(TheaterForm)
