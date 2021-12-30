@@ -1,8 +1,14 @@
 import React from 'react'
 import { deleteConcert } from '../../redux/ConcertAction'
 import { connect } from 'react-redux'
+import { deleteConcert } from '../../redux/ConcertAction'
 
-export default function ConcertCard() {
+
+function ConcertCard(props) {
+
+    function handleDelete(){
+        props.dispatchDeleteConcert(props.id)
+    }
     
     return (
         <div>
@@ -11,3 +17,11 @@ export default function ConcertCard() {
         </div>
     )
 }
+
+function mapDispatchToProps(dispatch){
+    return {
+        dispatchDeleteConcert: (id) => dispatch(deleteConcert(id))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ConcertCard)
