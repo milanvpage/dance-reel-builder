@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-export default class EditCommercialForm extends Component {
+class EditCommercialForm extends Component {
     render() {
         console.log(this.props)
         return (
@@ -14,3 +15,5 @@ export default class EditCommercialForm extends Component {
         )
     }
 }
+
+export default connect()(EditCommercialForm)
