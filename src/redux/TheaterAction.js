@@ -32,5 +32,18 @@ export const addTheater = (theater) => { // take in arg so we have datat for our
         .then(theater => dispatch({type: "ADD_THEATER", payload: theater})) // kinda like what I'm doing in my first fetch request up top
     }
 }
-// edit theater
  // delete theater
+ export const deleteTheater = (id) => { // need to pass in id and then interpolate my URL so i can have access to that id
+    return (dispatch) => {
+        fetch(`http://localhost:3000/theaters/${id}`, {
+            method: "DELETE" // AND we don't need any "body" or anything like that becasue we're just sending through the id in the URl
+
+        }) // also need that config object as well here so we cna be able to delete
+        .then(r => r.json())// then we can parse out our json response
+        // this will sometimes send an error  if we're sneidng through no content and we're not sneding back any json, we can't pass any json out of a repsonse that we're not sending 
+        .then(data => dispatch({type: "DELETE_THEATER", payload: id})) // here I can just delete that perosn by the id that we have up inour URL - I don't even need to pull it from datat because we're not sneidng any data
+       // this is whre I'll want ot dispatch nad sned through a payload of id
+       }
+} 
+
+// edit theater
