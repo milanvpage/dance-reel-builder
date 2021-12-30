@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 class EditCommercialForm extends Component {
+    // set up intial state
+    state = {
+
+    }
+
     render() {
         console.log(this.props)
         return (
@@ -16,4 +21,6 @@ class EditCommercialForm extends Component {
     }
 }
 
-export default connect()(EditCommercialForm)
+export default connect(state => ({commercial: state.commercial}))(EditCommercialForm)
+// need to use mapStateToProps and pull out commercials
+// I want to look at the store state that has all my commercials and determine based on the id that's in my route which commercial I'm talking about inorder to populate this form
