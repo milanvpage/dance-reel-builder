@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { setTheater } from '../../redux/TheaterAction'
+import TheaterCard from './TheaterCard'
 import TheaterForm from './TheaterForm'
 
 class TheaterContainer extends Component {
@@ -16,7 +17,7 @@ class TheaterContainer extends Component {
                 <TheaterForm />
                 <div>
                     <ul>
-                    {this.props.theater.map(theater => <li key={theater.id}>{theater.name}</li>)}
+                    {this.props.theater.map(theater => <TheaterCard key={theater.id} {...theater}/>)}
                     </ul>
                 </div>
             </div>
