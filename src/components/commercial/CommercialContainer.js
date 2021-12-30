@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { setCommercial } from './../../redux/CommercialAction'
 import CommercialCard from './CommercialCard'
 import CommercialForm from './CommercialForm'
+import { Switch, Route } from 'react-router-dom'
+import EditCommercialForm from './EditCommercialForm'
 
 class CommercialContainer extends React.Component {
     
@@ -15,8 +17,12 @@ render(){
     return (
         <div>
             <h1>All Commercial Dance</h1>
+            {/* if its an edit i want to render the edit form if its a new commercial I want to render the commercial form at the route commercial/new */}
+            <Switch>
+            <Route exact path="/commercial/:id/edit"component={routerProps => <EditCommercialForm routerProps={routerProps} />} />
+            <Route exact path="/commercial/new"component={routerProps => <CommercialForm />} />
+            </Switch>
             <div>
-                <CommercialForm />
                 <ul>
                 {this.props.commercial.map(commercial => <CommercialCard key={commercial.id} {...commercial}/>)}
                 {/* pass through my key as a prop for my id - and spreading out all my props for my commercial and sneding it through to my CommercialCard */}

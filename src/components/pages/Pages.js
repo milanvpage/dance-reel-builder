@@ -10,12 +10,11 @@ export default function Pages() {
     return (
         <div>
             <Switch>
-                <Route exact path="/commercial" component={routerProps => <CommercialContainer routerProps={routerProps} />}></Route>
-                <Route exact path="/theater" component={routerProps => <TheaterContainer routerProps={routerProps} />}></Route>
-                <Route exact path="/concert" component={routerProps => <ConcertContainer routerProps={routerProps} />}></Route>
-                <Route exact path="/" component={routerProps => <Home routerProps={routerProps} />}></Route>
+                <Route  path="/commercial" component={routerProps => <CommercialContainer routerProps={routerProps} />}></Route>
+                <Route  path="/theater" component={routerProps => <TheaterContainer routerProps={routerProps} />}></Route>
+                <Route  path="/concert" component={routerProps => <ConcertContainer routerProps={routerProps} />}></Route>
+                <Route  path="/" component={routerProps => <Home routerProps={routerProps} />}></Route>
             {/* build out another route that has a dynmaic route aspect to it so I can edit a specific commercial */}
-                <Route exact path="/commercial/:id/edit" component={routerProps => <EditCommercialForm routerProps={routerProps} />}></Route>
             </Switch>
         </div>
     )
