@@ -1,8 +1,9 @@
 import React from 'react'
-import { deleteConcert } from '../../redux/ConcertAction'
+import { deleteTheater } from '../../redux/TheaterAction'
 import { connect } from 'react-redux'
 
-export default function ConcertCard() {
+export default function TheaterCard() {
+    
     
     return (
         <div>
