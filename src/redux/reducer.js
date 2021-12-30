@@ -109,8 +109,8 @@ export default reducer
 // another way we can do this instead of using slice:
 
 // const updatedCommercial = state.commercial.map(c => {
-//     if (c.id === commercialObj.id){
-//         return commercialObj
+//     if (c.id === action.payload.id){
+//         return action.paylaod
 //     }
 //     return c
 // })
