@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
+import { addConcert } from '../../redux/ConcertAction'
+import { connect } from 'react-redux'
 
-
-export default class ConcertForm extends Component {
+class ConcertForm extends Component {
     
     state = {
         name: ""
@@ -35,3 +36,11 @@ export default class ConcertForm extends Component {
         )
     }
 }
+
+function mapDispatchToProps(dispatch){
+    return {
+        dispatchAddConcert: concert => dispatch(addConcert(concert))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(ConcertForm)
