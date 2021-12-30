@@ -57,4 +57,17 @@ export const addCommercial = (commercial) => { // take in arg so we have datat f
 
 // edit commercial
 // little more complicated becasue we're taking data that already exists in my state and changing it around
- 
+ export const editCommercial = (commercial) => {
+     return (dispatch) => {
+        fetch(`http://localhost:3000/commercials/${commercial.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            },
+            body: JSON.stringify({ name: commercial.name})
+        })
+        .then(r => r.json()) // parse out my response for my JSON
+        .then( c => dispatch(({type: "EDIT_COMMERCIAL", payload: c}))) // should get a commercial back from my backend and we can can always check that by goignto my controller and seeing if we're  sneidng a jsone repsonse back
+     }
+ } // if I'm editing a perosn I'm goign to need access to some data from React so we pass it in as an arg first and then when we pass the arg again to JSON.stringify(commercial)

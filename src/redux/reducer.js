@@ -62,7 +62,7 @@ function reducer(state = {
 
             // {type: "EDIT_COMMERCIAL", payload: commercialObj}
 
-            const personIndex = state.commercial.findIndex( c => c.id === action.payload.id)
+            const commercialIndex = state.commercial.findIndex( c => c.id === action.payload.id)
             // here I'm looking at my action.payload which is my coommercialObject that's going to be coming from my action, or coming from my backend too 
             // AND THEN looking at the id of that commercial and comparing it otthe id of the commercial in my state, as I'm iterating over this  
             return {
@@ -71,10 +71,10 @@ function reducer(state = {
                 // THEN getting the rest of that slice of my commercials
                 ...state,
                 commercial: [
-                    ...statecommercial.slice(0, commercialIndex),
+                    ...state.commercial.slice(0, commercialIndex),
                     action.payload, // my updatedCommercial is just coming from my action payload
                     // then the rest of my item will be the rest of that slice
-                    ...commercial.slice(commercialIndex + 1)
+                    ...state.commercial.slice(commercialIndex + 1)
                     // then if we don't pass in that second arg it'll just take the rest of my array
                 ]
             }
@@ -114,3 +114,5 @@ export default reducer
 //     }
 //     return c
 // })
+
+            // {type: "EDIT_COMMERCIAL", payload: commercialObj}
