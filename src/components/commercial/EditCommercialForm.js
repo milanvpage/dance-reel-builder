@@ -56,3 +56,8 @@ function mapStateToProps(state){
 export default connect(mapStateToProps)(EditCommercialForm)
 // need to use mapStateToProps and pull out commercials
 // I want to look at the store state that has all my commercials and determine based on the id that's in my route which commercial I'm talking about inorder to populate this form
+
+// need to bring in dispatch here
+// hook up editCommercial Action
+// Then I would want to do is onSubmit dispatch that action and pull out our state here that we're changing instead of like right now I'm pulling out is I'm hardcoding in the orginal name with an extra !
+// instead of this         props.editCommercial({name: props.name + "!", id: props.id}) here (in my COmmercialCard - in my EditCommercialForm Id be pulling it out of my state - FROM what we're managing with our input field
