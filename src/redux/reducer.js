@@ -45,7 +45,17 @@ function reducer(state = {
                 ...state,
                 commercial: newCommercials // we could have defined the filter logic here, it's just good to keep extra logic separate from our return and leave our return really clean
             }
-    
+        case "EDIT_COMMERCIAL":
+            // {type: "DELETE_COMMERCIAL", payload: 10}
+            // for this one, what I'm expecting is something similar in terms of our delte action object BUT no winstead of an id number we're goign to need that whole commercial object 
+            // {type: "EDIT_COMMERCIAL", payload: commercialObj}
+            // edit a commercial that already exists in my state BUT not mutate my state 
+            // find sepcifc commercial in my state 
+            // what do we need to know about the commercial in term of my redux state - how will we be returning our Object here
+            // when we're returnig our state here, again we wnat to spread out our original state
+            // THEN we're going to be changing our commercial: key which is an array []
+            // what are we goignto need to do inside of this array to change one commercial and still retrun all of my commercials 
+            // In other words: we don't wnat to remove a commercial from an array edit it and then retun it to the bottom of the page, we want to keep it ezcalty where it is without messign up the order of my array/ how my data is orginally ordered
         default:
             return state;
     }
