@@ -46,7 +46,12 @@ export const addCommercial = (commercial) => { // take in arg so we have datat f
          }) // also need that config object as well here so we cna be able to delete
          .then(r => r.json())// then we can parse out our json response
          // this will sometimes send an error  if we're sneidng through no content and we're not sneding back any json, we can't pass any json out of a repsonse that we're not sending 
-         .then(data => dispatch({type: "DELETE_COMMERCIAL", payload: id})) // here I can just delete that perosn by the id that we have up inour URL - I don't even need to pull it from datat because we're not sneidng any data
+         .then(commercialID => dispatch({type: "DELETE_COMMERCIAL", payload: commercialID})) // here I can just delete that perosn by the id that we have up inour URL - I don't even need to pull it from datat because we're not sneidng any data
         // this is whre I'll want ot dispatch nad sned through a payload of id
         }
- }
+ } 
+
+ // if your backend isn't sneidngany json data you will prbably see an error if you're tryng to call r.json or that json method on a response object where it doens't have any json response-
+ // you'll get this "Uncaught (in promise) SYntaxError: Unexpected end of JSON input at commercialAction.js"
+// what we can do is instead of handling the .then(r => r.json()) we can just takes in our response, not parse any json out of it becasue we don't need to and then just  dispatch right away
+// BECAUSE we don't need to handle parsing any json response out 

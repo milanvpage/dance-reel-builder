@@ -3,7 +3,6 @@ import { deleteCommercial } from '../../redux/CommercialAction'
 import { connect } from 'react-redux' // need access to connect in order to dispatch
 
 function CommercialCard({ id, name, deleteCommercial }) {
-
     function handleDelete(){
         deleteCommercial(id) // this is actual  "dispatchDeleteComercial" the prop we created that's equal to a function that takes dispatch and dispatch(deleteCommercial(commercial))
     }
@@ -15,7 +14,7 @@ function CommercialCard({ id, name, deleteCommercial }) {
 }
 // function mapDispatchToProps(dispatch){
 //     return {
-//         dispatchDeleteComercial: (commercial) => dispatch(deleteCommercial(commercial))
+//         dispatchDeleteComercial: (id) => dispatch(deleteCommercial(id))
 //     }
 // }
 export default connect(null, { deleteCommercial })(CommercialCard)
