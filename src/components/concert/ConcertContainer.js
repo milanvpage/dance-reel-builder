@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { setConcert } from './../../redux/ConcertAction'
+import ConcertForm from './ConcertForm'
 
 
 class ConcertContainer extends Component {
@@ -17,6 +18,7 @@ class ConcertContainer extends Component {
         return (
             <div>
                 <h1>All Concert Dance</h1>
+                <ConcertForm />
                 <div>
                     <ul>
                     {this.props.concert.map(concert => <li key={concert.id}>{concert.name}</li>)}
