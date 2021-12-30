@@ -33,13 +33,13 @@ function reducer(state = {
 
             return {
               ...state,
-              commercial: [...state.commercial, action.payload] // as long as my payload is directly my commercial object then we're good, it's kind of up to us how we are formatting it - as long as we call our key payload - but let'ssay that my datat was formatted differntly, like action.payload.commercial, it hasa key of commercial then we'd have to write it this way to access our data
+              theater: [...state.theater, action.payload] // as long as my payload is directly my commercial object then we're good, it's kind of up to us how we are formatting it - as long as we call our key payload - but let'ssay that my datat was formatted differntly, like action.payload.commercial, it hasa key of commercial then we'd have to write it this way to access our data
             };
         case "ADD_CONCERT":
 
             return {
               ...state,
-              commercial: [...state.commercial, action.payload] // as long as my payload is directly my commercial object then we're good, it's kind of up to us how we are formatting it - as long as we call our key payload - but let'ssay that my datat was formatted differntly, like action.payload.commercial, it hasa key of commercial then we'd have to write it this way to access our data
+              concert: [...state.concert, action.payload] // as long as my payload is directly my commercial object then we're good, it's kind of up to us how we are formatting it - as long as we call our key payload - but let'ssay that my datat was formatted differntly, like action.payload.commercial, it hasa key of commercial then we'd have to write it this way to access our data
             };
         case "DELETE_COMMERCIAL":
             // {type: "DELETE_COMMERCIAL", payload: 10}
