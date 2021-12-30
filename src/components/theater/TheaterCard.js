@@ -2,8 +2,11 @@ import React from 'react'
 import { deleteTheater } from '../../redux/TheaterAction'
 import { connect } from 'react-redux'
 
-export default function TheaterCard() {
-    
+function TheaterCard(props) {
+
+    function handleDelete(){
+        props.dispatchDeleteTheater(props.id)
+    }
     
     return (
         <div>
@@ -12,3 +15,11 @@ export default function TheaterCard() {
         </div>
     )
 }
+
+function mapDispatchToProps(dispatch){
+    return {
+        dispatchDeleteTheater: (id) => dispatch(deleteTheater(id))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(TheaterCard)

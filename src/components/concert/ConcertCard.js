@@ -1,7 +1,6 @@
 import React from 'react'
 import { deleteConcert } from '../../redux/ConcertAction'
 import { connect } from 'react-redux'
-import { deleteConcert } from '../../redux/ConcertAction'
 
 
 function ConcertCard(props) {
