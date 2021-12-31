@@ -20,7 +20,7 @@ class ConcertContainer extends Component {
         return (
             <div>
                 <h1>All Concert Dance</h1>
-                <Link to="/concert/new">Add a project</Link>
+                <Link className="form-link" to="/concert/new">Add a project</Link>
                 <Route exact path="/concert/new"component={ routerprops => <ConcertForm />} />
 
                 <div>

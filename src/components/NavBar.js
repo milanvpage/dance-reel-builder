@@ -17,9 +17,7 @@ export default function NavBar() {
                 <NavLink to="/theater">Theater</NavLink>
                 -
                 <NavLink to="/concert">Concert</NavLink>
-                <br/>
-                <br/>
-                <h1 id="Nav-Title">Dance Hudl</h1>
+                
             </Nav>
         </Navbar.Collapse>
     </Container>

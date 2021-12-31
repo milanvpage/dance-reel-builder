@@ -15,7 +15,7 @@ class TheaterContainer extends Component {
         return (
             <div>
                 <h1>All Theater Dance</h1>
-                <Link to="/theater/new">Add a project</Link>
+                <Link className="form-link" to="/theater/new">Add a project</Link>
                 <Route exact path="/theater/new" component={routerProps => <TheaterForm />} />
                 <div>
                     <ul>
