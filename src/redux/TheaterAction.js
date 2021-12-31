@@ -1,5 +1,7 @@
 // BEST PRATICE with the SET_theater variable
 //  export const setTheater = (theater) => ({type: SET_theater, payload: theater})
+// import {SET_THEATER, DELETE_THEATER, ADD_THEATER } from './ActionCreators'
+
 
 export const setTheater = () => {
     

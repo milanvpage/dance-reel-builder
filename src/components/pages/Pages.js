@@ -13,6 +13,7 @@ export default function Pages() {
                 <Route  path="/theater" component={routerProps => <TheaterContainer routerProps={routerProps} />}></Route>
                 <Route  path="/concert" component={routerProps => <ConcertContainer routerProps={routerProps} />}></Route>
                 <Route  path="/" component={routerProps => <Home routerProps={routerProps} />}></Route>
+
             {/* build out another route that has a dynmaic route aspect to it so I can edit a specific commercial */}
             </Switch>
         </div>

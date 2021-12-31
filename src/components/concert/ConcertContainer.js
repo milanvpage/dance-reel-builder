@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { setConcert } from './../../redux/ConcertAction'
 import ConcertCard from './ConcertCard'
 import ConcertForm from './ConcertForm'
+import { Link, Route } from 'react-router-dom'
 
 
 class ConcertContainer extends Component {
@@ -19,7 +20,9 @@ class ConcertContainer extends Component {
         return (
             <div>
                 <h1>All Concert Dance</h1>
-                <ConcertForm />
+                <Link to="/concert/new">Add a project</Link>
+                <Route exact path="/concert/new"component={ routerprops => <ConcertForm />} />
+
                 <div>
                     <ul>
                     {this.props.concert.map(concert => <ConcertCard key={concert.id} {...concert}/>)}

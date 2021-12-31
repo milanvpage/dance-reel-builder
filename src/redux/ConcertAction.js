@@ -1,5 +1,6 @@
 // BEST PRATICE with th SET_CONCERT variable
 //  export const setConcert = (concert) => ({type SET_CONCERT, payload: concert})
+// import {SET_CONCERT, DELETE_CONCERT, ADD_CONCERT } from './ActionCreators'
 
 export const setConcert = () => {
     

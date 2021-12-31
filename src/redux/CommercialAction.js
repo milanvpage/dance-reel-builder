@@ -1,6 +1,7 @@
 
 // BEST PRATICE with the SET_COMMERCIAL variable
 //  export const setCommercial = (commercial) => ({type: SET_COMMERCIAL, payload: commercial})
+// import { EDIT_COMMERCIAL, SET_COMMERCIAL, DELETE_COMMERCIAL, ADD_COMMERCIAL } from './ActionCreators'
 
 export const setCommercial = () => {
     

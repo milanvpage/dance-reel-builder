@@ -10,8 +10,8 @@ function TheaterCard(props) {
     
     return (
         <div>
-            <li>{props.name}</li>
-            <button onClick={handleDelete}>X</button>
+            <li>{props.name} - {props.url}</li>
+            <button onClick={handleDelete}>Delete</button>
         </div>
     )
 }

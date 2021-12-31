@@ -9,10 +9,12 @@ body {
 
 h1 {
   color: rgb(175, 147, 110);
+  text-align: center;
 }
 
 li {
   color: rgb(138, 49, 197);
+  /* text-align: center; */
 }
 
 h4 {
@@ -23,4 +25,48 @@ h3 {
   color: rgb(138, 49, 197);
 }
 
+.form {
+  text-align: center;
+  margin: auto;
+    margin-bottom: 2rem;
+    width: 60%;
+    border: 5px solid #FFFF;
+    padding: 10px;
+    background-color: #dccae2;
+    border-radius: 12px;
+    box-shadow: 3px 4px rgb(175, 147, 110);
+
+}
+
+button {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+
+  font-weight: 600;
+  color: #813494;
+  background-color: #dccae2;
+
+  /* Button is inline-block element by default, it need to have block display for margin: 0 ato; to work */
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 2rem;
+
+  /* Button is a clickable element, therefore it should have a pointer cursor */
+  cursor: pointer;
+  text-align: center;
+}
+
+button:focus,
+button:hover {
+    background-color: #8400ff;
+    color: #e0efff;
+}
+
+
+.name {
+  font-weight: 600;
+
+  margin-top: 16px;
+}
 

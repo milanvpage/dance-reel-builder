@@ -1,3 +1,11 @@
+// import { combineReducers } from "redux";
+
+// export default combineReducers({
+//     commercial,
+//     theater,
+//     concert
+// }
+
 function reducer(state = {
     commercial: [], 
     concert: [], 
@@ -116,6 +124,8 @@ function reducer(state = {
     }
 }
 
+
+
 export default reducer
 
 // takes two args state and action 
@@ -149,3 +159,35 @@ export default reducer
 // })
 
             // {type: "EDIT_COMMERCIAL", payload: commercialObj}
+
+// // //SET
+// const  SET_COMMERCIAL = "SET_COMMERCIAL",
+
+// const  SET_CONCERT = "SET_CONCERT",
+
+// const  SET_THEATER = "SET_THEATER"
+
+// //ADD
+// const  ADD_COMMERCIAL = "ADD_COMMERCIAL"
+
+// const  ADD_CONCERT = "ADD_CONCERT"
+
+// const  ADD_THEATER = "ADD_THEATER"
+
+// //DELETE
+// const  DElETE_COMMERCIAL = "DELETE_COMMERCIAL"
+  
+// const  DELETE_CONCERT = "DELETE_CONCERT"
+
+// const  DELETE_THEATER = "DELETE_THEATER"
+
+
+// //EDIT
+// const  EDIT_COMMERCIAL = "EDIT_COMMERCIAL"
+
+
+
+
+
+
+
