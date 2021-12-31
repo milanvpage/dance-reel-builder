@@ -77,3 +77,16 @@ button:hover {
 .form-link {
   color: #8400ff;
 }
+
+.card {
+  text-align: center;
+  margin: auto;
+    margin-bottom: 2rem;
+    width: 60%;
+    border: 5px solid #FFFF;
+    padding: 10px;
+    background-color: #dccae2;
+    border-radius: 12px;
+    box-shadow: 3px 4px rgb(175, 147, 110);
+
+}
