@@ -9,7 +9,7 @@ function TheaterCard(props) {
     }
     
     return (
-        <div>
+        <div className= "card">
             <li>{props.name} - {props.url}</li>
             <button onClick={handleDelete}>Delete</button>
         </div>

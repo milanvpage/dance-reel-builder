@@ -1,5 +1,6 @@
 import React from 'react'
-import { deleteCommercial, editCommercial } from '../../redux/CommercialAction'
+// import { deleteCommercial, editCommercial } from '../../redux/CommercialAction'
+import { deleteCommercial } from '../../redux/CommercialAction'
 import { connect } from 'react-redux' // need access to connect in order to dispatch
 
 function CommercialCard(props) {
@@ -13,7 +14,7 @@ function CommercialCard(props) {
     //     props.editCommercial({name: props.name + "!", id: props.id}) // instead of passing through my whole person object, becasue I really only need the id and the name and I know I need to add something to the name - LET"S just send ir throguh for now as an object with the name of props.name + !, id
     // }
     return (
-        <div>
+        <div className= "card">
             <li>{props.name} - {props.url}</li>
             {/* <button onClick={handleEdit}>!</button> */}
             <button onClick={handleDelete}>Delete</button>
