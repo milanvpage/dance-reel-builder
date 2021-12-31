@@ -13,11 +13,13 @@ componentDidMount(){
     this.props.dispatchSetCommercial()
 }
 
+
+
 render(){
     return (
         <div>
             <h1>All Commercial Dance</h1>
-            <Link to="/commercial/new">Add a project</Link>
+            <Link id="form-link"to="/commercial/new">Upload Project</Link>
             {/* if its an edit i want to render the edit form if its a new commercial I want to render the commercial form at the route commercial/new */}
             <Switch>
             {/* <Route exact path="/commercial/:id/edit"component={routerProps => <EditCommercialForm routerProps={routerProps} />} /> */}
