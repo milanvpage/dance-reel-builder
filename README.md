@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# Dance Hudl
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# README
 
-## Available Scripts
+Welcome to the Dance Hudl App!!! This App was created for professional dancers and choreogrpahers to organize their Professional Projects. Right now you have access to Upload thename of your project and a URL to Organize them into a list. You can then delete specific projects from that list. This app is still in production and will hopefully soon have the functionality to uplaod the files of the your projects and turn them into one big Dance Reel based on the genre!
+# Installation
+>1. Clone this Repository
+>2. Open your terminal
+>3. npm install inside your terminal
+>4. start your server up by running ```yarn start``` or ```npm start```in your terminal
+>5. click this link to clone the backend repository: ```https://github.com/milanvpage/dance_reel_builder-backend.git```
+>6. Open up the terminal in your backend and run ```bundle install``` and then ```rails s``` to start up your server
+>7. You now have access to your frontend and backend
+>Finally a new web browser window/tab at localhost:3001 will open up and you can begin using the app.
 
-In the project directory, you can run:
+# Usage
 
-### `yarn start`
+  Once your app is up and running you will be able to view all of the Dance projects posted by other users. To Upload a Project of your own, you can click on the NavBar at the top of the page and choose with field you wnat to upload your project to. Their will be a link on that specific page that says ```Upload Project```. Once clicked, a form will pop up for you to fill out to Upload a Dance Project. Make sure to fill out every field so your Projects display properly. Once You Fill out every field, click ```Submit``` at the bottom of the form and you should see Your Project displayed on the Page! 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  You then have the option to Delete your Uploaded Projects. To Delete them, you can click on the Delete buttom that From there your Shoes information will turn into a form where you can change any details you'd like. To Delete your Projects, just simply click the delete button at the bottom of your Uploaded Project.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+  TaDa!!! You Uploaded Dance Project!!! And now know how to Delete Them!!!
 
-### `yarn test`
+# Development
+>After checking out the repo, run npm install on the frontend to install the necessary dependencies.
+>After checking out the repo, run bundle install on the backend to install the necessary dependencies.
+# Contributing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+>Bug reports and pull requests are welcome on GitHub at https://github.com/milanvpage/dance-reel-builder.git. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct.
 
-### `yarn build`
+# Code Of Conduct
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+>Everyone interacting with the Dance Hudl App project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.
