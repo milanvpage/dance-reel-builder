@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { setCommercial } from './../../redux/CommercialAction'
 import CommercialCard from './CommercialCard'
 import CommercialForm from './CommercialForm'
-import { Switch, Route, Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 // import EditCommercialForm from './EditCommercialForm'
 
 class CommercialContainer extends React.Component {
@@ -21,10 +21,10 @@ render(){
             <h1>All Commercial Dance</h1>
             <Link className="form-link"to="/commercial/new">Upload Project</Link>
             {/* if its an edit i want to render the edit form if its a new commercial I want to render the commercial form at the route commercial/new */}
-            <Switch>
+            {/* <Switch> */}
             {/* <Route exact path="/commercial/:id/edit"component={routerProps => <EditCommercialForm routerProps={routerProps} />} /> */}
             <Route exact path="/commercial/new"component={ routerProps => <CommercialForm />} />
-            </Switch>
+            {/* </Switch> */}
             <div>
                 <ul>
                 {this.props.commercial.map(commercial => <CommercialCard key={commercial.id} {...commercial}/>)}
@@ -32,6 +32,7 @@ render(){
         {/* instead of doing person={person} - THIS way i don'thave to callit inside my CommercialCard props.person.name etc.. now I can just call and get those attributes directly */}
                 </ul>
             </div>
+
         </div>
         )
     }
